@@ -1,0 +1,77 @@
+.Menu {
+    width: 100%;
+    position: fixed;
+    background: #000;
+    height: 6.25vh;
+    transform: translateY(-101%);
+    z-index: 10;
+}
+.Menu > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3.125vh;
+    margin-left: 1vw;
+    transform: translateY(-50%);
+}
+.Sections {
+    color: #fff;
+    background: #000;
+    border: 0.1vw solid #353535;
+    border-radius: 0.5vh;
+    font-size: 1vw;
+    font-weight: 700;
+    padding: 0.5vh 0.7vw 0.7vh;
+    
+}
+.Sections > *:first-child {
+    margin-right: 0.5vw;
+}
+.Sections > .Hamburger {
+    width: 1vw;
+    transform: translateY(15%);
+}
+.logo_svg {
+    height:3.125vh;
+}
+.wpLogo {
+    transform: translateY(-48%); 
+}
+@media only screen and (orientation: portrait)  {
+    .Menu {
+        height:7.5vh;
+    }
+    .Menu > * {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .logo_svg {
+        height:3.5vh;
+    }
+    .wpLogo {
+        position: absolute;
+        left: 50%;
+        height: 50%;
+        top: 50%;
+        margin-left: 0;
+        transform: translate(-50%, -48%);
+    }
+    .Sections {
+        position: absolute;
+        left: 2vh;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3.5vh;
+        height: auto;
+    }
+    .Sections > *:first-child {
+        margin-right: 0vw;
+        display: none;
+    }
+    .Sections > .Hamburger {
+        width: 100%;
+        transform: none;
+    }
+}

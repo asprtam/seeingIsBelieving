@@ -1,0 +1,108 @@
+.Container {
+    position: relative;
+    background: #fff;
+    z-index: 2;
+}
+.Article {
+    width: 80vw;
+    position: relative;
+    padding: 8vh 0 0;
+    margin: 0 auto;
+    color: #333;
+}
+.Article p {
+    width: 59%;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.86em;
+}
+.Article p > span {
+    width: 100%;
+    margin-bottom: 1.2em;
+    transform-origin: 0% 100%;
+    display: block;
+    transform: rotateY(90deg);
+}
+.Article p > span > span {
+    display: block;
+    margin-bottom: 1.2em;
+}
+.Article p:last-child > span {
+    margin-bottom: 0;
+}
+.BigImg {
+    margin: 8vh auto 0;
+}
+.BigImg img {
+    width: 100%;
+    transform-origin: 0% 0%;
+    transform: rotateX(270deg);
+}
+.TwoImg {
+    margin: 1.5vw auto 8vh;
+    width: 100%;
+}
+.TwoImg img {
+    display: inline-block;
+    height: 37vw;
+}
+.TwoImg img:first-child {
+    transform: rotateY(90deg);
+    transform-origin: 0% 0%;
+    width: 59%;
+    margin-right: 2%;
+    object-fit: cover;
+}
+.TwoImg img:last-child {
+    transform: rotateY(270deg);
+    transform-origin: 100% 100%;
+    width: 39%;
+    
+}
+@media screen and (max-width: 1440px) {
+    .Article p {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .Article {
+        width: 100%;
+    }
+    .Article p {
+        width: 90%;
+    }
+    .BigImg {
+        margin: 1em auto 0;
+    }
+    .TwoImg {
+        margin: 1.5vw auto 1em;
+    }
+}
+@media only screen and (orientation: portrait)  {
+    .BigImg {
+        margin: 1em auto 0;
+    }
+    .Article {
+        width: 100%;
+        padding-top: 0vh;
+        margin-top: 26vh;
+        padding-bottom: 1em;
+    }
+    .Article p {
+        width: 80%;
+    }
+    .TwoImg {
+        margin: 1.5vw auto 1em;
+    }
+    .TwoImg img {
+        display: inline-block;
+        height: auto;
+        margin: 0.5em 10%;
+    }
+    .TwoImg img:first-child {
+        width: 80%;
+    }
+    .TwoImg img:last-child {
+        width: 80%;
+    }
+}

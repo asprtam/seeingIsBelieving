@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import Menu from './top/menu';
+import Sign from './top/sign';
+import Hero from './hero/hero';
+import Article from './article/article';
+import Footer from './footer/footer';
 
-function App() {
+const App = () => {
+  useEffect(() =>{
+    window.getComputedStyle(document.body);
+  })
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu/>
+      <Sign/>
+      <Hero/>
+      <Article/>
+      <Footer>Let CaseDesign’s 3D renderings and proprietary CaseStudy® process transform your—or your client’s—next project.</Footer>
     </div>
   );
 }

@@ -1,0 +1,126 @@
+.Slider {
+    position: relative;
+    width: 80vw;
+    height: 48.89vw;
+    margin: 8vh 0;
+    transform: rotateX(90deg);
+}
+.Before, .After {
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+}
+.Before {
+    background-position: left;
+    border-right: 2px #fff solid;
+    background-image: url('./before1.jpg');
+}
+.After {
+    background-position: right;
+    border-left: 2px #fff solid;
+    right: 0px;
+    background-image: url('./after1.jpg');
+}
+.sliderMarker {
+    z-index: 5;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px #fff solid;
+    background: #c50b29;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.sliderMarker p {
+    position: absolute;
+    width: 200%;
+    color: #e8e8e8;
+    font-weight: bold;
+    bottom: 50%;
+    left: 130%;
+    transform: translateY(50%);
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    filter: blur(0px);
+}
+.sliderMarker:active > p, .Slider:active > .sliderMarker p {
+    opacity: 0;
+    filter: blur(4px);
+}
+.sliderMarker:before {
+    content: '';
+    display: block;
+    margin-left: 2vw;
+    margin-top: 2vw;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 36.94%;
+    background: url('./arrows.png');
+    background-size: cover;
+}
+@media only screen and (orientation: portrait), screen and (max-width: 900px) {
+    .After {
+        border-left: 1px #fff solid; 
+        background-image: url('./after2.jpg');
+    }
+    .Before {
+        border-right: 1px #fff solid;
+        background-image: url('./before2.jpg');
+    }
+    .Slider {
+        width: 100%;
+        height: 61.11vw;
+        margin: 8vw 0 20vw;
+    }
+    .Slider:before {
+        content: 'Slide to compare';
+        display: block;
+        color: #c50b29;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.1em;
+        line-height: 1.86em;
+        margin: 1vw 0;
+    }
+    .sliderMarker {
+        border: 2px #fff solid;
+        width: 12vw;
+        height: 12vw;
+        transform: translate(-50%, 25%);
+    }
+    .sliderMarker:before {
+        margin-left: 6vw;
+        margin-top: 6vw;
+    }
+    .sliderMarker p {
+        display: none;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .Before {
+        background-image: url('./before3.jpg');
+    }
+    .After {
+        background-image: url('./after3.jpg');
+    }
+}
+@media screen and (max-width: 1800px) {
+    .Before {
+        background-image: url('./before4.jpg');
+    }
+    .After {
+        background-image: url('./after4.jpg');
+    }
+}
+@media screen and (min-width: 1800px) {
+    .Before {
+        background-image: url('./before5.jpg');
+    }
+    .After {
+        background-image: url('./after5.jpg');
+    }
+}
